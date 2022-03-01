@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Products Page</title>
+    <link type="text/css" rel="stylesheet" href="css/stilAdmin.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="upAddP">
+    <div class="logo2"><a th:href="@{home}"><img src="pictures/logo.png" height="100" width="150" style="position: center"></a>
+    </div>
+</div>
+<div class="container" style=" height: 820px; background-color: #F9F1FF; margin-left: 200px">
+    <h2>Add New Books</h2>
+    <hr>
+    <form name="addProd" method="post" action="#" th:action="@{/process_addProd}" th:object = "${produs}">
+    <h6>Title</h6><input type="text" th:field="*{titlu}"  class="form-control mb-4 col-4" REQUIRED>
+        <h6>Author</h6><input type="text" th:field="*{autor}"  class="form-control mb-4 col-4" REQUIRED>
+        <h6>Publishing</h6><input type="text" th:field="*{editura}"  class="form-control mb-4 col-4" REQUIRED>
+        <h6>Type</h6><input type="text" th:field="*{gen}"  class="form-control mb-4 col-4" REQUIRED>
+        <h6>Quantity</h6><input type="text" th:field="*{cantitate}"  class="form-control mb-4 col-4" REQUIRED>
+        <h6>Price</h6><input type="text" th:field="*{pret}"  class="form-control mb-4 col-4" REQUIRED>
+        <h6>Image</h6><input type="text" th:field="*{imagine}"  class="form-control mb-4 col-4" REQUIRED>
+        <button type="submit" name="submit1" value="Adaugă produs" class="btn btn-info col-2">Add new product</button>
+    </form>
+    <hr>
+
+    <a th:href = "@{/productsList}"> Back to Products List</a>
+</div>
+</body>
+</html>
+<!--<form name="addProd" method="post" action="#" th:action="@{/process_addProd}" th:object = "${produs}">-->
+<!--    <table>-->
+<!--        <tr><td><h6 style ="color: black; size: 10px; font-family: Cambria; margin-left: 20px">Titlu</h6></td><td><input type="text" th:field="*{titlu}"  size="20" REQUIRED></td>-->
+<!--            <td><h6 style ="color: black; size: 10px; font-family: Cambria">Autor</h6></td><td><input type="text" th:field="*{autor}"  size="20" REQUIRED></td>-->
+<!--            <td><h6 style ="color: black; size: 10px; font-family: Cambria">Editură</h6></td><td> <input type="text" th:field="*{editura}"  size="20" REQUIRED></td>-->
+<!--            <td><h6 style ="color: black; size: 10px; font-family: Cambria">Gen</h6></td><td> <input type="text" th:field="*{gen}"  size="10" REQUIRED></td>-->
+<!--            <td><h6 style ="color: black; size: 10px; font-family: Cambria">Cantitate</h6></td><td><input type="text" th:field="*{cantitate}"size="5" REQUIRED></td>-->
+<!--            <td><h6 style ="color: black; size: 10px; font-family: Cambria">Preț</h6></td><td><input type="text" th:field="*{pret}" size="5" REQUIRED></td>-->
+<!--            <td><h6 style ="color: black; size: 10px; font-family: Cambria">Imagine</h6></td><td><input type="text" th:field="*{imagine}" size="20" REQUIRED></td>-->
+<!--            <td><button type="submit" name="submit1" value="Adaugă produs" class="btn btn-primary btn-sm mb-3" style="margin-top: 12px; margin-left: 5px">Adaugă produs</button></td></tr>-->
+<!--    </table>-->
+<!--</form>-->

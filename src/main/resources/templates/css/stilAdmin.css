@@ -1,0 +1,113 @@
+
+.up{
+    background-color: white;
+}
+
+.upListP{
+    background-color: blanchedalmond;
+    margin-bottom: 30px;
+
+}
+.upAddP{
+    background-color: #F9F1FF;
+    margin-bottom: 100px;
+
+}
+.upEditP{
+    background-color: #B8FFA0;
+    margin-bottom: 100px;
+
+}
+
+.logo {
+    background-color: white;
+    width: 200px;
+    height: auto;
+    margin-left: 700px;
+}
+
+.logo1 {
+    background-color: blanchedalmond;
+    width: 200px;
+    height: auto;
+    margin-left: 700px;
+}
+
+.logo2 {
+    background-color: #F9F1FF;
+    width: 200px;
+    height: auto;
+    margin-left: 700px;
+}
+
+.logo3 {
+    background-color: #B8FFA0;
+    width: 200px;
+    height: auto;
+    margin-left: 700px;
+}
+
+.menu {
+    height: 30px;
+    word-spacing: 10px;
+    width: 900px;
+    font-size: 100%;
+    font-weight: normal;
+    text-align: right;
+    font-family: Cambria;
+    margin-top: 20px;
+    padding-left: 520px;
+    position: absolute;
+}
+
+ul{
+    list-style:none;
+    color: black;
+    margin:0px;
+    padding:0px;
+
+}
+ul li{
+    height: 40px;
+    background-color: bisque;
+    border: 1px solid mediumpurple;
+    border-left: none;
+    border-right: none;
+    float:left;
+    width:250px;
+    text-align:center;
+    margin-right:2px;
+    border-radius: 3px;
+}
+ul li a{
+    text-decoration:none;
+    color:black;
+}
+ul li:hover{
+    display:block;
+    background-color: #FDECFF;
+    border-radius: 3px;
+}
+ul li ul li{
+    display:none;
+}
+ul li:hover ul li{
+    display:block;
+}
+.content{
+    margin-top: 120px;
+    background-color: white;
+    padding-top: 10px;
+}
+.add{
+    margin-top: 170px;
+    background-color:#EBDEF0;
+    padding-top: 10px;
+}
+.addProdDiv{
+    background-color: #EBDEF0;
+    height: 600px;
+    padding-top: 55px;
+    padding-left: 20px;
+    padding-right: 18px;
+}

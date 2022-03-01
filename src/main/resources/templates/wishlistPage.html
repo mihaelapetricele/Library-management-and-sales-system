@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/stilShopCart.css">
+</head>
+<body style="background-color:	#E6E6FA">
+
+      <!--  <table style="border: 1px; margin-left: 600px" class = "table table-striped table-responsive-md">
+            <thead >
+            <th><h3 style ="color: black; size: 20px">Title</h3></th>
+            <th><h3 style ="color: black; size: 20px">Price</h3></th>
+            <th><h3 style ="color: black; size: 20px">Image</h3></th>
+</thead>
+            <tbody>
+            <tr th:each="product: ${productWishlist}">
+                <td th:text="${product.bookName}" ></td>
+                <td th:text="${product.price}" ></td>
+                <td th:style="'background-image:url('+ ${product.image}+');background-size:cover;width:100px;height:150px'"></td>
+            </tr></tbody>
+        </table>-->
+    <div class="card">
+        <div class="row">
+            <div class="col-md-8 cart">
+                <div class="title">
+                    <div class="row">
+                        <div class="col">
+                            <h4 style="margin-left: 500px" ><b>WishList</b></h4>
+                            <p><a th:href="@{/productsLogin}"> <h6 style="color: gray">&nbsp&nbsp&nbsp&nbsp<-Back to shop</h6></a></p>
+                        </div>
+                    </div>
+                </div>
+    <div style="margin-left: 220px" class="row border-top border-bottom">
+        <div   class="row main align-items-center" th:each="product: ${productWishlist}">
+            <div class="col-2" th:style="'background-image:url('+ ${product.image}+');background-size:cover;width:100px;height:150px'"></div>
+            <div style="margin-left: 25px" class="col">
+                <div class="row text-muted">Title</div>
+                <div class="row" th:text="${product.bookName}"></div>
+            </div>
+            <div style="margin-left: 25px" class="col">
+                <div class="row text-muted">Price</div>
+                <div class="col" th:text="${product.price}">
+                </div></div>
+            <div class="col">
+                <!--<div class="row text-muted">Delete</div>-->
+                <div style="float:left" class="col"><a th:href="@{/deleteProductFromWishlist/{id}(id=${product.idProductBook})}"></a>&#10005;</div>
+                <div style="float: right" class="col" ><a th:href="@{/addBookInCart/{id}(id=${product.id_book})}"><button>Add to cart</button></a></div>
+            </div>
+        </div>
+    </div>
+    </div>
+        </div>
+    </div>
+</body>
+</html>

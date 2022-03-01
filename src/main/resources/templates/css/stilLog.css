@@ -1,0 +1,211 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: papayawhip;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+
+#log {
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    height: 30px;
+    width: 150px;
+    padding-top: 15px;
+    color: black;
+    border-radius: 10px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: white;
+    color: black;
+    padding: 7px 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: 150px;
+    height: 40px;
+    padding: 7px 18px;
+    background-color: tan;
+    border: none;
+}
+
+.loginbtn {
+    height: 40px;
+    width: 200px;
+    background-color: tan;
+    border: none;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    /*margin: 40px 0 30px 0;*/
+    position: relative;
+}
+
+.container {
+    padding: 10px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    padding-top: 30px;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    margin-right: 420px;
+    margin-top: 110px;
+    width: 60%;
+    height: 60%;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: salmon;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes animatezoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+h1 {
+    font-size: 125%;
+    font-weight: normal;
+    text-align: right;
+    margin-right: 20px;
+    font-family: Cambria;
+}
+
+p {
+    height: 100px;
+}
+
+a.men:link, a.men:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a.men:hover, a.men:active {
+    color: orange;
+    text-decoration: none;
+}
+
+a.signup:link, a.signup:visited {
+    text-decoration: none;
+    color: orange;
+}
+
+a.signup:hover, a.signup:active {
+    color: navajowhite;
+    text-decoration: none;
+}
+
+.up {
+    display: flex;
+}
+
+.logo {
+    float: right;
+    width: 200px;
+    height: auto;
+    margin-left: 40px;
+}
+
+.menu1 {
+    margin-top: 40px;
+    margin-bottom: 5px;
+    margin-right: 300px;
+    height: auto;
+    text-align: right;
+    word-spacing: 10px;
+    width: 1500px;
+    float: left;
+
+}
+
+#sign{
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    width:500px;
+    height:650px;
+    float: left;
+    box-shadow: 10px 10px 10px 8px gray;
+    padding: 10px;
+    position: relative;
+    border-radius: 10px;
+    padding-left: 30px;
+    margin-left: 490px;
+    margin-top: 40px;
+}

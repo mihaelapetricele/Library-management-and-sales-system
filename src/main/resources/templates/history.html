@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products Page</title>
+    <link type="text/css" rel="stylesheet" href="css/stil.css">
+    <link type="text/css" rel="stylesheet" href="css/stilMenu.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+</head>
+<body style="background-color: #E0E0E0">
+<div class="top" >
+    <div class="up1">
+        <div class="logo1"><a href="home.html"><img src="pictures/logo.png" height="100" width="150" style="position: center"></a>
+        </div>
+        <div class="menu1"><h3 style="font-size: 125%;font-weight: normal;text-align: right;font-family: Cambria;">
+            <a th:href="@{/register}" ><img src="./pictures/shop.jpg" height="27" width="30"></a>
+            <a th:href="@{/register}"><img src="./pictures/acount.png" height="27" width="30"></a></h3>
+        </div>
+    </div>
+    <div class="menuProducts" style="margin-top: 40px">
+        <ul>
+            <li><a th:href="@{/home}" class="linkProducts"><h5 >HOME</h5></a></li>
+            <li><a th:href="@{/products}" class="linkProducts"><h5 >BOOKS</h5></a>
+                <ul>
+                    <li><a th:href="@{/fiction}" class="linkProducts"><h6>Fiction</h6></a></li>
+                    <li><a th:href="@{/history}" class="linkProducts"><h6 >History</h6></a></li>
+                    <li><a th:href="@{/romance}" class="linkProducts"><h6 >Romance</h6></a></li>
+                    <li><a th:href="@{/food}" class="linkProducts"><h6>Food</h6></a></li>
+                    <li><a th:href="@{/comics}" class="linkProducts"><h6 >Comics & Graphics Novels</h6></a></li>
+                    <li><a th:href="@{/children}" class="linkProducts"><h6>Children's Books</h6></a></li>
+                    <li><a th:href="@{/mystery}" class="linkProducts"><h6 >Mystery & Thrillers</h6></a></li>
+                    <li><a th:href="@{/arts}" class="linkProducts"><h6>Arts & Photography</h6></a></li>
+                </ul></li>
+            <li><a th:href="@{/about}" class="linkProducts"><h5 >ABOUT</h5></a></li>
+            <li><a th:href="@{/contact}" class="linkProducts"><h5>CONTACT</h5></a></li>
+        </ul>
+    </div>
+    <div class="books" style="background-color: white;margin-top: 130px">
+        <div class="row" style="margin-top: 300px; ">
+            <div class="col-lg-4 col-lg-4 col-lg-4" th:each="book: ${listBooksFilter}" style="padding-left: 150px;" >
+                <div th:style="'background-image:url('+ ${book.imagine}+');background-size:cover;width:150px;height:220px;padding-left: 20px'">
+                </div>
+                <div class="caption" style="margin-right: 100px;padding-top: 10px">
+                    <b>Title: </b><span th:text="${book.titlu}" style="padding-bottom: 0"></span></b><br>
+                    <b>Author: </b><i><span th:text="${book.autor}" style="padding-bottom: 0;"></span></i><br>
+                    <b>Publishing: </b><i><span th:text="${book.editura}" style="padding-bottom: 0;"></span></i><br>
+                    <b>Price: </b><i><span th:text="${book.pret}" style="padding-bottom: 0;height: 30px"></span> lei</i><br>
+                </div><br>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

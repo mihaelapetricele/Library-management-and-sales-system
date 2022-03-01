@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Slide Navbar</title>
+    <link type="text/css" rel="stylesheet" href="css/stilSignUp.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+    <a th:href="@{/login}"><button>Login</button></a>
+    <div class="signup">
+        <form name="signup" method="post" action="#" th:action="@{/process_register}" th:object = "${user}">
+            <label for="chk" aria-hidden="true" style="margin-bottom: 40px; margin-top: 30px">Sign up</label>
+            <input type="text" th:field="*{nume}" name="txt" placeholder="Nume" required="">
+            <input type="text" th:field="*{prenume}" name="txt" placeholder="Prenume" required="">
+            <input type="email" th:field="*{email}" name="email" placeholder="Email" required="">
+            <input type="text" th:field="*{username}" name="txt" placeholder="Username" required="">
+            <input type="password" th:field="*{password}" name="pswd" placeholder="Password" required="">
+            <label for="chk" aria-hidden="true" style="font-size: 1.5em; margin-top: 0; margin-bottom: 10px">Role</label>
+
+            <label class="labelRole">
+                <input th:field="*{role}" type="radio" name="light" value="CLIENT" id="client" class="roleInput">
+                <span class="text">Client</span>
+            </label>
+
+            <label class="labelRole">
+                <input th:field="*{role}" type="radio" name="light" value="ADMIN" id="admin" class="roleInput" >
+                <span class="text">Administrator</span>
+            </label>
+
+            <label class="labelRole">
+                <input th:field="*{role}" type="radio" name="light" value="TRANSPORTOR" id="transportor" class="roleInput">
+                <span class="text">Transportor</span>
+            </label>
+                <button type="submit" style="margin-top: 40px">Sign up</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Sign up Page</title>-->
+<!--    <link type="text/css" rel="stylesheet" href="css/stilLog.css">-->
+<!--</head>-->
+<!--&lt;!&ndash;<body style="background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)">&ndash;&gt;-->
+<!--&lt;!&ndash;<body style="background-image: url(pictures/backsignup1.jpg)">&ndash;&gt;-->
+<!--<body>-->
+<!--<div id="sign">-->
+<!--    <a th:href="@{/login}">Login</a>-->
+<!--    <table>-->
+<!--        <form name="signup" method="post" action="#" th:action="@{/process_register}" th:object = "${user}">-->
+<!--            <tr><b><h1 style="color: white; font-family: 'Times New Roman';font-size: 30px;margin-right: 170px"><b><i>Creează cont</i></b></h1></b></tr><br><br>-->
+<!--            <tr><td><h3 style ="color: white; size: 10px">Nume</h3></td></tr><tr><td><input type="text" th:field="*{nume}" name="num" size="50" REQUIRED></td></tr>-->
+<!--            <tr><td><h3 style ="color: white; size: 10px">Prenume</h3></td></tr><tr><td><input type="text" th:field="*{prenume}" name="prenum" size="50" REQUIRED></td></tr>-->
+<!--            <tr><td><h3 style ="color: white; size: 10px">Email</h3></td></tr><tr><td> <input type="email" th:field="*{email}" name="email" size="50" REQUIRED></td></tr>-->
+<!--            <tr><td><h3 style ="color: white; size: 10px">Username</h3></td></tr><tr><td> <input type="text" th:field="*{username}" name="username" size="50" REQUIRED></td></tr>-->
+<!--            <tr><td><h3 style ="color: white; size: 10px">Parola</h3></td></tr><tr><td><input type="password" th:field="*{password}" name="password" size="50"></td></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>-->
+<!--            <tr><td><label><h3 style ="color: white; size: 10px"> Choose a role:</h3></label></td></tr><tr></tr><tr></tr><tr></tr><tr><td>-->
+<!--            <input type="radio" th:field="*{role}" id="client" name="role" value="client"><label for="client" style ="color: white">Client</label></td></tr><tr><td>-->
+<!--            <input type="radio" th:field="*{role}" id="administrator" name="role" value="admin"><label for="administrator" style ="color: white">Administrator</label></td></tr><tr><td>-->
+<!--            <input type="radio" th:field="*{role}" id="transportor" name="role" value="transportor"><label for="transportor" style ="color: white">Transportor</label></td></tr>-->
+<!--            <tr><td>-->
+<!--                <input type="submit" name="submit1" value="Înregistrează-te" style=" border: none ;margin-left: 180px; margin-top: 20px;height: 40px;width: 130px;border-radius: 7px;box-shadow: 5px 5px 5px 8px gray;"></td></tr>-->
+<!--        </form>-->
+<!--    </table>-->
+<!--</div>-->
+<!--&lt;!&ndash;<a th:href="@{/signup_form}">Signup</a>&ndash;&gt;-->
+<!--&lt;!&ndash;<ul>&ndash;&gt;-->
+<!--&lt;!&ndash;    <li th:each="user : ${users}">&ndash;&gt;-->
+<!--&lt;!&ndash;        <span th:text= "${user.nume}"></span>&ndash;&gt;-->
+<!--&lt;!&ndash;    </li>&ndash;&gt;-->
+<!--&lt;!&ndash;</ul>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->

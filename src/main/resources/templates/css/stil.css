@@ -1,0 +1,164 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: brown;
+}
+
+p {
+    height: 100px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover, a:active {
+    color: orange;
+    text-decoration: none;
+}
+.linkMenuHome:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+.linkMenuHome:hover, a:active {
+    color: orange;
+    text-decoration: none;
+}
+.up {
+    background-color: gold;
+    display: flex;
+}
+.up1 {
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+.logo {
+    background-color: gold;
+    float: right;
+    width: 200px;
+    height: auto;
+    margin-left: 40px;
+}
+.logo1 {
+    width: 200px;
+    height: auto;
+    margin-left: 700px;
+}
+.menu {
+    background-color: gold;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    height: auto;
+    text-align: right;
+    word-spacing: 10px;
+    width: 1500px;
+    float: left;
+}
+.menu1 {
+    height: 50px;
+    word-spacing: 10px;
+    width: 1479px;
+    float: right;
+    padding-right: 100px;
+}
+.userAuth{
+    float: left;
+}
+.mijloc {
+    background-color: gold;
+    height: 649px;
+    width: 1536px;
+    position: absolute;
+}
+
+.mijlocProducts {
+
+    height: 430px;
+    width: 1479px;
+    margin-top: 10px;
+    padding: 0 200px 0 200px;
+    margin-right: 100px;
+    margin-left: 20px;
+}
+.slideBar{
+
+    height: 350px;
+}
+
+.bookStore{
+    background-color: white;
+    height: 50px;
+    width: 200px;
+    /*padding: 7px 18px;*/
+    border: none;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: large;
+}
+button {
+    background-color: white;
+    color: black;
+    /*padding: 7px 20px;*/
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    margin-left: 43%;
+}
+button:hover {
+    opacity: 0.8;
+}
+.continut{
+    height: 1000px;
+    width: 1200px;
+    margin-top: 20px;
+    background-color: black;
+}
+.books{
+    /*float: right;*/
+    width: 1440px;
+    height: auto;
+    margin-top: 100px;
+    padding-top: 50px;
+    margin-left: 40px;
+   /* border: 1px solid mediumpurple;
+    border-top: none;*/
+}
+a.linkProducts:link, a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a.linkProducts:hover, a:active {
+    color: black;
+    text-decoration: none;
+}
+#allBooks{
+    text-align: justify;
+}
+#allBooks > div {
+    width: 100px; /* Declare your value. Can be in relative units. */
+    height: 100px;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px black solid;
+
+    /* IE fix. */
+    *display: inline;
+    zoom: 1;
+}
+#allBooks:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+}

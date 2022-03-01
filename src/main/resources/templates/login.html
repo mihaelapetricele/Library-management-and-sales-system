@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link type="text/css" rel="stylesheet" href="css/stilLog.css">
+
+</head>
+<!--<body style="background: radial-gradient(circle, rgba(238,174,174,1) 0%, rgba(255,217,179,0.919502835313813) 100%)">-->
+<body style="background-image: url(pictures/backlog.jpg)">
+<div class="top">
+    <div class="up">
+        <div class="logo"><img src="pictures/logo.png" height="100" width="150">
+        </div>
+        <div class="menu1"><h1><a class="men" href="products.html" target="_top"> BookStore</a> <a class="men" href="/"
+                                                                                                   target="_top">
+            About</a> <a class="men" href="/" target="_top"> Contact</a> <img src="./pictures/shop.jpg" height="27"
+                                                                              width="30" style="margin-right: 15px"><a
+                href="login.html"><img src="./pictures/acount.png" height="27" width="30"></a></h1>
+        </div>
+    </div>
+
+    <form class="modal-content animate" th:action="@{/login}" method="post">
+        <div th:if="${param.error}">
+            <h3 style="color: red; margin-left: 330px;">Invalid username and password</h3>
+        </div>
+        <div th:if="${param.logout}">
+            <h3 style="color: forestgreen; margin-left: 360px">You have been logged out</h3>
+        </div>
+        <div class="container">
+            <div style="margin-left: 220px;">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="uname" required id="uname" th>
+            </div>
+            <div style="margin-left: 220px;">
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required id="psw">
+            </div>
+                <div style="margin-left: 370px;">
+                    <button type="submit" onclick="document.getElementById('id01').style.display='none'"
+                            class="loginbtn">Login
+                    </button>
+                </div>
+        </div>
+        <div style="left: 0;">
+            <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
+                    Cancel
+                </button>
+                <h4 style="margin-left: 630px">Don't have an account? <a class="signup" th:href="@{/register}">Sign Up</a></h4>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

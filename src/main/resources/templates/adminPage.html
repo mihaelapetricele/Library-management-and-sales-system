@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina Administratorului</title>
+    <link type="text/css" rel="stylesheet" href="css/stilAdmin.css">
+    <link rel="shortcut icon" href="#" />
+</head>
+<body style="background-color: cornsilk">
+<div class="up">
+    <div class="logo"><a th:href="@{home}"><img src="pictures/logo.png" height="100" width="150" style="position: center"></a>
+    </div>
+</div>
+<div style="padding-left: 1300px;background-color: white"> <a th:href="@{/logout}"><img src="./pictures/logout.png" height="20" width="20"></a>LogOut</div>
+<div  class="menu">
+    <ul>
+        <li><a th:href="@{productsList}"><h3>PRODUCTS LIST</h3></a></li>
+        <li><a th:href="@{deleteClients}"><h3>DELETE CLIENTS</h3></a></li>
+    </ul>
+</div>
+<div id="continut" class="content">
+    <div style="margin-left: 570px;margin-right: 500px; padding-left: 80px;">
+    <h1>Administrator Page</h1>
+    <h2 style="margin-left: 80px">Welcome!</h2>
+        <img src="pictures/admin.jpg" height="300" width="400">
+    </div>
+
+</div>
+</body>
+</html>
